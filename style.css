@@ -19,46 +19,39 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--violet);
+    width: 23.4375rem;
+    padding: 32px 36px 38px 36px;
+    margin: 0 auto;
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
     background-image: url(images/bg-mobile.svg);
-    /* background-image: url(design/mobile-design375.jpg); */
     background-repeat: no-repeat;
-    background-position: top left;
     background-size: cover;
+    background-position-x: center;
 }
 
-/* MOBILE VERSION */
-.page {
-    padding-top: 9%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 11%;
-    /* padding-top: 64px; */
-    /* padding-left: 73px; */
-    /* padding-right: 73px; */
-    /* padding-bottom: 80px; */
-}
+/* --mobile version-- */
 
-.page__graphics {
-    /* padding-bottom: 113px; */
-    padding-bottom: 19%;
-}
-
-.page__logo {
-    /* width: 41%; */
-    width: 7rem;
-    /* padding-bottom: 115px; */
-    padding-bottom: 19.5%;
+.logo {
+    background-image: url(images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 7.8125rem;
+    height: 1.5625rem;
 }
 
 .page__hero {
-    width: 100%;
+    background-image: url(images/illustration-mockups.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18.875rem;
+    height: 13.375rem;
+    margin: 4.1875rem 0 3.75rem 0;
 }
 
 .page__text {
@@ -68,19 +61,21 @@ body {
 }
 
 .page__title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    padding-bottom: .8rem;
+    padding-bottom: 0.875rem;
+    letter-spacing: -.1px;
 }
 
 .page__pitch {
-    font-size: .9rem;
-    padding-bottom: 1rem;
-    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 .page__register {
-    padding: .6rem 0;
+    padding: 0.6875rem 0 0.625rem 0;
     display: inline-block;
     text-decoration: none;
     width: 12.5rem;
@@ -88,7 +83,7 @@ body {
     background-color: var(--white);
     border-radius: 45px;
     font-size: .75rem;
-    box-shadow: 2px 5px 12px 0px hsl(273, 18%, 24%);
+    box-shadow: 2px 3px 10px 0px hsl(273, 18%, 24%);
 }
 
 .page__social {
@@ -98,29 +93,24 @@ body {
     list-style-type: none;
 }
 
-/* .page__social-links {
-    padding-left: 0.6875rem;
-    padding-right: 0.6875rem;
-} */
-
 .page__icon {
-    width: 1.9rem;
-    margin: 0 .2rem;
+    width: 1.75rem;
+    margin: 0 .3rem 0 .3rem;
 }
 
-
 .attribution {
-    font-size: .7rem;
+    font-size: .6rem;
     text-align: center;
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+    bottom: 1.25rem;
 }
 
 .attribution__link {
-    color: hsl(228, 45%, 44%);
+    color: var(--soft-magenta);
 }
 
-/***********/
-/* DESKTOP */
-/***********/
+/* desktop version */
 @media screen and (min-width: 1000px) {
     
     .body {
@@ -140,7 +130,8 @@ body {
         padding-left: 5rem;
         padding-right: 5rem;
         padding-bottom: 2.5rem;
-        column-gap: .8rem;
+        column-gap: 2rem;
+        max-width: 87.5rem;
     }
     
     .page__graphics {
@@ -148,13 +139,8 @@ body {
     }
 
     .page__logo {
-        /* padding-bottom: 113px; */
         padding-bottom: 4.7rem;
-        width: 13rem;
-    }
-
-    .page__hero {
-        width: 44rem;
+        width: max(13rem, 41%);
     }
 
     .page__text {
@@ -164,7 +150,6 @@ body {
     
     .page__title {
         font-size: 2.5rem;
-        /* padding-bottom: 1rem; */
         padding-top: .9rem;
     }
 
@@ -174,7 +159,6 @@ body {
     }
 
     .page__register {
-        /* width: 200px; */
         width: 12.5rem;
         text-align: center;
         font-size: 1.1rem;
@@ -190,8 +174,11 @@ body {
     }
 
 }
-/**************/
-/* CHANGE LOG */
-/**************/
-/* 5/24/2022 - Redo mobile & desktop layouts */
-/* 5/23/2022 - Body update */
+/* change log
+
+5/25/2022 - Updates to increase responsiveness
+5/24/2022 - Redo mobile & desktop layouts
+5/23/2022 - Body update
+6/13/2022 - Refactor mobile version 
+
+*/
