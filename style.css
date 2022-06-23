@@ -18,29 +18,27 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--violet);
-    padding: 32px 36px 38px 36px;
+    padding: 2rem 2.25rem 2.375rem 2.25rem;
     margin: 0 auto;
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
     top: 0;
+    background-color: var(--violet);
     background-image: url(images/bg-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
-    background-position-y: top;
     height: 100vh;
 }
 
-/* --mobile version-- */
 
+/* mobile layout */
 .page__logo {
     background-image: url(images/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 16px;
+    padding: 1rem;
     margin: 0 0 0 -3px;
 }
 
@@ -49,40 +47,46 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
-    padding: 108px;  
-    margin: 59px 0 3.75rem 0;
+    padding: 6.75rem;  
+    margin: 3.6875rem 0 3.75rem 0;
 }
 
 .page__text {
     color: var(--white);
     text-align: center;
-    padding: 0 0 4rem 0;
+    padding: 0 0 3.875rem 0;
 }
 
 .page__title {
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 0 0 .875rem 0;
     letter-spacing: -.1px;
+    padding: 0 0 .875rem 0;
 }
 
 .page__pitch {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-    padding: 0 0 1.5rem 0;
     line-height: 1.5;
+    padding: 0 0 1.5rem 0;
 }
 
 .page__register {
-    padding: 0.6875rem 0 0.625rem 0;
     display: inline-block;
     text-decoration: none;
     width: 12.5rem;
-    color: var(--violet);
+    border-radius: 2.8125rem;
     background-color: var(--white);
-    border-radius: 45px;
+    color: var(--violet);
     font-size: .75rem;
+    padding: 0.6875rem 0 0.625rem 0;
     box-shadow: 2px 3px 10px 0px hsl(273, 18%, 24%);
+    transition: all 200ms;
+}
+
+.page__register:hover {
+    background-color: var(--soft-magenta);
+    color: var(--white);
 }
 
 .page__social {
@@ -92,54 +96,54 @@ body {
     list-style-type: none;
 }
 
+.page__social-links {
+    padding: 0 0.25rem 0 0.25rem;
+}
+
 .page__icon {
-    width: 1.75rem;
     margin: 0 .3rem 0 .3rem;
 }
 
-.attribution {
-    font-size: .6rem;
-    text-align: center;
-    color: hsl(0, 0%, 100%);
-    position: absolute;
-    bottom: 0;
+svg {
+    width: 1.875rem;
+    height: 1.875rem;
+    transition: all 200ms;
 }
 
-.attribution__link {
-    color: var(--soft-magenta);
+svg:hover {
+    fill: var(--soft-magenta);
 }
 
-/* desktop version */
+
+/* desktop layout */
 @media screen and (min-width: 1000px) {
     
     body {
+        position: relative;
         background-image: url(images/bg-desktop.svg);
         background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: top;
         background-size: cover;
-        padding: 0px;
+        padding: 0 0 0 0;
     }
     
     .page {
         display: grid;
-        grid-template-rows: 1fr;
         grid-template-columns: 56% 1fr;
+        grid-template-rows: 1fr;
         flex: 1;
-        /* max-width: 87.5rem; */
     }
     
     .page__desktop-left {
         grid-column-start: 1;
-        padding: 54px 0 0 50px;
+        padding: 3.375rem 0 0 3.125rem;
     }
 
     .page__desktop-right {
         grid-column-start: 2;
-        padding: 0 90px 23px 29px;
         display: flex; 
         flex-direction: column;
         justify-content: center;
+        padding: 0 5.625rem 1.4375rem 1.8125rem;
     }
 
     .page__logo {
@@ -148,8 +152,8 @@ body {
     }
 
     .page__hero {
-        padding: 254px;
-        margin: 85px 0 0 0;
+        padding: 15.875rem;
+        margin: 5.3125rem 0 0 0;
     }
 
     .page__text {
@@ -159,33 +163,40 @@ body {
     
     .page__title {
         font-size: 2.5rem;
-        /* padding: .9rem 0 1rem 0; */
     }
 
     .page__pitch {
         font-size: 1.1rem;
         letter-spacing: .2px;
-        padding: 8px 0 .9rem 0;
+        padding: 0.5rem 0 .9rem 0;
     }
 
     .page__register {
-        width: 12.5rem;
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 0.9375rem 0;
-        margin: 10px 0 0 0;
         grid-column-start: 2;
         grid-row-start: 5;
+        width: 12.5rem;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0.9375rem 0;
+        margin: 0.625rem 0 0 0;
     }
 
     .page__share {
         position: absolute;
-        bottom: 33px;
-        right: 73px;
+        bottom: 2.0625rem;
+        right: 4.5625rem;
     }
 
     .page__social {
         display: flex;
+    }
+    
+    .page__social-links {
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    svg {
+        width: 2.5625rem;
+        height: 2.5625rem;
     }
 
     .page__icon {
@@ -194,11 +205,4 @@ body {
     }
 
 }
-/* change log
 
-5/25/2022 - Updates to increase responsiveness
-5/24/2022 - Redo mobile & desktop layouts
-5/23/2022 - Body update
-6/13/2022 - Refactor mobile version 
-
-*/
